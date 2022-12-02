@@ -764,7 +764,7 @@ h6 {
 }
 
 .gallery .gallery-links {
-  position: absolute;
+  /* position: absolute; */
   inset: 0;
   opacity: 0;
   transition: all ease-in-out 0.3s;
