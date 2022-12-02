@@ -821,7 +821,7 @@ h6 {
 }
 
 .gallery-btn a{
-  color: white;
+  color: white !important;
 
 }
 
