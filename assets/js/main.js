@@ -25,25 +25,45 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Mobile nav toggle
    */
-  const mobileNavShow = document.querySelector('.mobile-nav-show');
-  const mobileNavHide = document.querySelector('.mobile-nav-hide');
+  // 
+  // const navitems = document.querySelector('#nau-ul');
 
-  document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
-    el.addEventListener('click', function(event) {
-      event.preventDefault();
-      mobileNavToogle();
-    })
-  });
-
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavShow.classList.toggle('d-none');
-    mobileNavHide.classList.toggle('d-none');
-  }
+  // 
+  // function mobileNavToogle() {
+  //   document.querySelector('body').classList.toggle('mobile-nav-active');
+  //   
+  // }
 
   /**
    * Hide mobile nav on same-page/hash links
    */
+
+
+   const mobileNavShow = document.querySelector('.mobile-nav-show');
+    const mobileNavHide = document.querySelector('.mobile-nav-hide');
+    const mobileNavbar = document.querySelector('.navbar');
+
+
+
+document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
+         el.addEventListener('click', function(event) {
+          event.preventDefault();
+          hidenav();
+          mobileNavHide.classList.toggle('d-none');
+           mobileNavShow.classList.toggle('d-none');
+
+
+          
+       })
+    });   
+
+    
+    function hidenav(){
+      console.log("hello");
+      mobileNavbar.classList.toggle("ul-hide")
+    }
+
+
   document.querySelectorAll('#navbar a').forEach(navbarlink => {
 
     if (!navbarlink.hash) return;
@@ -63,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Toggle mobile nav dropdowns
    */
   const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
+  console.log(navDropdowns);
 
   navDropdowns.forEach(el => {
     el.addEventListener('click', function(event) {
@@ -180,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 var form = document.getElementById("my-form");
+console.log(form);
     
     async function handleSubmit(event) {
       event.preventDefault();
